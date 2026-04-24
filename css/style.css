@@ -1,0 +1,163 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #000;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    padding-top: 15px;
+}
+
+.img-topo {
+    height: 25px;
+}
+
+ul {
+    height: 25px;
+    width: 95%;
+    display: flex;
+    justify-content:space-between;
+    list-style-type: none;
+    position:fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    padding: 10px 40px;
+}
+video {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    min-height: 80vh;
+}
+
+.capa {
+    position:absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 40%;
+    z-index: 3;
+}
+
+.capa-titulo {
+    color: white;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height:1.1;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.capa-descricao {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.link-assistir,.link-info {
+    background-color: rgba(255,255,255,0.35);
+    color:black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-assistir:hover,.link-info:hover {
+    background-color: white;
+    color:black;
+    font-weight: 500;
+}
+
+
+.linha-filmes {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.linha-filmes img {
+    height: 150px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.linha-filmes img:hover {
+    transform: scale(1.1);
+}
+
+.linha-filmes::-webkit-scrollbar {
+    display: none;
+}
+
+.linha-filmes {
+    scrollbar-width: none;
+}
+
+
+/* -------------------------------------------------------- */
+
+.carrossel-container {
+    position: relative;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Left arrow */
+.seta.esquerda {
+    left: 10px;
+}
+
+/* Right arrow */
+.seta.direita {
+    right: 10px;
+}
+
+/* --------------------------------------------------------- */
+
+
+.modal {
+ display: none;
+ position: fixed;
+ z-index: 5;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.modal-conteudo {
+background-color: #181818;
+margin: 30px auto;
+padding: 20px;
+width: 60%;
+color: white;
+
+}
